@@ -1,0 +1,37 @@
+<div class="w-full my-6 bg-gray-50 border border-gray-300 px-6 py-6">
+  <button
+    [ngClass]="friend.is_best_friend ? 'bg-green-500' : 'bg-red-500'"
+    class="inline-block  float-right block w-auto px-6 h-10 text-white"
+    (click)="onUpdateBestFriend(friend)"
+  >
+    <svg *ngIf="friend.is_best_friend" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 font-light inline-block mx-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+    </svg>
+    <svg *ngIf="!friend.is_best_friend" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 font-light inline-block mx-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+    </svg>
+    Best friend
+  </button>
+  <img
+    *ngIf="(friend.avatar) == ''" src="../../../assets/images/avatars/default.png"
+    class="inline-block h-32 border border-gray-400 mr-6 mt-0"
+    alt="">
+  <div class="inline-block border">
+       <span class="block text-lg text-gray-700">
+      <span class="">Name: </span>
+      <span class="font-light">{{ friend.first_name }} {{ friend.last_name }}</span>
+    </span>
+    <span class="block text-xl text-gray-700">
+      <span class="">Email: </span>
+      <span class="font-light">{{ friend.email }}</span>
+    </span>
+    <span class="block text-xl text-gray-700">
+      <span class="">Age: </span>
+      <span class="font-light">{{ friend.age }}</span>
+    </span>
+    <span class="block text-xl text-gray-700">
+      <span class="">Favourite Language: </span>
+      <span class="font-light">{{ friend.favourite_language }}</span>
+    </span>
+  </div>
+</div>

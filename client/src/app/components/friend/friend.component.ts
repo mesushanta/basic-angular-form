@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Friend } from "../../../Interface/Friend";
 import { FriendService } from "../../services/friend.service";
 
@@ -13,6 +13,10 @@ export class FriendComponent implements OnInit {
 
   ngOnInit(): void {
     this.friendService.getFriends().subscribe((friends) => (this.friends = friends));
+  }
+
+  updateFriendAsBest(friend: Friend) {
+    console.log(friend);
   }
 
 }

@@ -45,7 +45,7 @@
       "email": "aayush@gmail.com",
       "phone": "0487 26 72 89",
       "favourite_language": "php",
-      "is_best_friend": false,
+      "is_best_friend": true,
       "avatar": "",
       "age": 24
     },
