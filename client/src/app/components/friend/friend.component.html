@@ -1,3 +1,29 @@
-<div>
-  <h1></h1>
+<div class="w-full max-w-screen-xl mx-auto my-12">
+  <h1>All Friends</h1>
+  <div *ngFor="let friend of friends"
+       class="w-full my-6 bg-gray-50 border border-gray-300 px-6 py-6"
+  >
+    <button class="bg-blue-500 float-right block w-auto px-6 h-10 text-white">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block mx-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+      Best friend
+    </button>
+    <span class="block text-lg text-gray-700">
+      <span class="">Name: </span>
+      <span class="font-light">{{ friend.first_name }} {{ friend.last_name }}</span>
+    </span>
+    <span class="block text-xl text-gray-700">
+      <span class="">Email: </span>
+      <span class="font-light">{{ friend.email }}</span>
+    </span>
+    <span class="block text-xl text-gray-700">
+      <span class="">Age: </span>
+      <span class="font-light">{{ friend.age }}</span>
+    </span>
+    <span class="block text-xl text-gray-700">
+      <span class="">Favourite Language: </span>
+      <span class="font-light">{{ friend.favourite_language }}</span>
+    </span>
+  </div>
 </div>

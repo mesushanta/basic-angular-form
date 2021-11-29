@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from "rxjs";
 import { LANGUAGES } from "../mock-language";
-import { Language} from "../../Model/Language";
+import { Language} from "../../Interface/Language";
 
 @Injectable({
   providedIn: 'root'

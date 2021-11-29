@@ -1,34 +1,38 @@
 <div class="w-full max-w-screen-xl mx-auto my-12">
   <h1 class="text-2xl text-gray-700">Add New Friend</h1>
 
-  <form class="full max-w-screen-sm my-12">
+  <form method="post" class="full max-w-screen-sm my-12">
 
     <div class="my-6">
-      <input type="text" name="first_name" class="mx-auto border border-gray-300 mt-2 px-3 py-3 text-sm w-full focus:border-gray-400 outline-none shadow-x " placeholder="First Name">
+      <label for="first_name" class="font-light text-gray-700 text-lg">First name</label>
+      <input type="text" name="first_name" class="mx-auto border border-gray-300 mt-2 px-3 py-3 text-sm w-full focus:border-gray-400 outline-none shadow-xl" placeholder="First Name">
       <span class="block text-sm text-red-400 mt-2">Error message</span>
     </div>
 
     <div class="my-6">
+      <label for="last_name" class="font-light text-gray-700 text-lg">Last name</label>
       <input type="text" name="last_name" class="mx-auto border border-gray-300 mt-2 px-3 py-3 text-sm w-full focus:border-gray-400 outline-none shadow-xl" placeholder="Last Name">
       <span class="block text-sm text-red-400 mt-2">Error message</span>
     </div>
 
     <div class="my-6">
-      <input type="text" name="email" class="mx-auto border border-gray-300 mt-2 px-3 py-3 text-sm w-full focus:border-gray-400 outline-none shadow-xl" placeholder="user@email.com">
+      <label for="email" class="font-light text-gray-700 text-lg">Email Address</label>
+      <input type="text" name="email" class="mx-auto border border-gray-300 mt-2 px-3 py-3 text-sm w-full focus:border-gray-400 outline-none shadow-xl" placeholder="myfriend@email.com">
       <span class="block text-sm text-red-400 mt-2">Error message</span>
     </div>
 
     <div class="my-6">
+      <label for="phone" class="font-light text-gray-700 text-lg">Phone Number</label>
       <input type="text" name="phone" class="mx-auto border border-gray-300 mt-2 px-3 py-3 text-sm w-full focus:border-gray-400 outline-none shadow-xl" placeholder="0032 488 288 783">
       <span class="block text-sm text-red-400 mt-2">Error message</span>
     </div>
 
     <div class="my-6">
+      <label for="first_name" class="font-light text-gray-700 text-lg">Favourite Programming Language</label>
       <select name="favourite_language" id=""  class="mx-auto border border-gray-300 mt-2 px-3 py-3 text-sm w-full focus:border-gray-400 outline-none shadow-xl">
-        <option value="">choose your favourite language</option>
+        <option value="" class="text-gray-300">choose one ...</option>
         <option *ngFor="let language of languages" value="{{ language.name }}">{{ language.name }}</option>
       </select>
-      <input type="text" name="" class="mx-auto border border-gray-300 mt-2 px-3 py-3 text-sm w-full focus:border-gray-400 outline-none shadow-xl" placeholder="eg: php, js">
       <span class="block text-sm text-red-400 mt-2">Error message</span>
     </div>
 

@@ -1,4 +1,5 @@
 export interface Language {
-  id?: number,
+  _id?: number,
   name: string
 }
+

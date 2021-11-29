@@ -1,40 +1,40 @@
-import { Language } from "../Model/Language";
+import { Language } from "../Interface/Language";
 
 export const LANGUAGES: Language[] = [
   {
-    id: 1,
+    _id: 1,
     name: "php"
   },
   {
-    id: 2,
+    _id: 2,
     name: "js"
   },
   {
-    id: 3,
+    _id: 3,
     name: "python"
   },
   {
-    id: 4,
+    _id: 4,
     name: "java"
   },
   {
-    id: 5,
+    _id: 5,
     name: "GO"
   },
   {
-    id: 6,
+    _id: 6,
     name: "C"
   },
   {
-    id: 7,
+    _id: 7,
     name: "C++"
   },
   {
-    id: 8,
+    _id: 8,
     name: "Kotlin"
   },
   {
-    id: 9,
+    _id: 9,
     name: "Objective C"
   }
   ]
