@@ -9,22 +9,25 @@
     </div>
 
     <div class="my-6">
-      <input type="text" name="last_name" class="mx-auto border border-gray-300 mt-2 px-3 py-3 text-sm w-full focus:border-gray-400 outline-none shadow-x " placeholder="Last Name">
+      <input type="text" name="last_name" class="mx-auto border border-gray-300 mt-2 px-3 py-3 text-sm w-full focus:border-gray-400 outline-none shadow-xl" placeholder="Last Name">
       <span class="block text-sm text-red-400 mt-2">Error message</span>
     </div>
 
     <div class="my-6">
-      <input type="text" name="email" class="mx-auto border border-gray-300 mt-2 px-3 py-3 text-sm w-full focus:border-gray-400 outline-none shadow-x " placeholder="user@email.com">
+      <input type="text" name="email" class="mx-auto border border-gray-300 mt-2 px-3 py-3 text-sm w-full focus:border-gray-400 outline-none shadow-xl" placeholder="user@email.com">
       <span class="block text-sm text-red-400 mt-2">Error message</span>
     </div>
 
     <div class="my-6">
-      <input type="text" name="phone" class="mx-auto border border-gray-300 mt-2 px-3 py-3 text-sm w-full focus:border-gray-400 outline-none shadow-x " placeholder="0032 488 288 783">
+      <input type="text" name="phone" class="mx-auto border border-gray-300 mt-2 px-3 py-3 text-sm w-full focus:border-gray-400 outline-none shadow-xl" placeholder="0032 488 288 783">
       <span class="block text-sm text-red-400 mt-2">Error message</span>
     </div>
 
     <div class="my-6">
-      <input type="text" name="favourite_language" class="mx-auto border border-gray-300 mt-2 px-3 py-3 text-sm w-full focus:border-gray-400 outline-none shadow-x " placeholder="eg: php, js">
+      <select name="favourite_language" id=""  class="mx-auto border border-gray-300 mt-2 px-3 py-3 text-sm w-full focus:border-gray-400 outline-none shadow-xl">
+        <option *ngFor="let language of languages" value="">{{ language.name }}</option>
+      </select>
+      <input type="text" name="" class="mx-auto border border-gray-300 mt-2 px-3 py-3 text-sm w-full focus:border-gray-400 outline-none shadow-xl" placeholder="eg: php, js">
       <span class="block text-sm text-red-400 mt-2">Error message</span>
     </div>
 

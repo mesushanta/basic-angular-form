@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LANGUAGES } from "../../mock-language";
+import { Language } from "../../../Model/Language";
 
 @Component({
   selector: 'app-add-friend',
@@ -6,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-friend.component.css']
 })
 export class AddFriendComponent implements OnInit {
-
+  languages: Language[] = LANGUAGES
   constructor() { }
 
   ngOnInit(): void {
