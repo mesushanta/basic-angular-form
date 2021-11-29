@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { LANGUAGES } from "../../mock-language";
 import { Language } from "../../../Model/Language";
+import { LanguageService } from "../../services/language.service";
 
 @Component({
   selector: 'app-add-friend',
@@ -8,10 +8,11 @@ import { Language } from "../../../Model/Language";
   styleUrls: ['./add-friend.component.css']
 })
 export class AddFriendComponent implements OnInit {
-  languages: Language[] = LANGUAGES
-  constructor() { }
+  languages: Language[] = [];
+  constructor(private  languageService: LanguageService) { }
 
   ngOnInit(): void {
+    this.languages = this.languageService.getlanguage();
   }
 
 }
