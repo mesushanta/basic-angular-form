@@ -12,7 +12,7 @@ export class AddFriendComponent implements OnInit {
   constructor(private  languageService: LanguageService) { }
 
   ngOnInit(): void {
-    this.languages = this.languageService.getlanguage();
+    this.languageService.getlanguage().subscribe((languages) => (this.languages = languages));
   }
 
 }
