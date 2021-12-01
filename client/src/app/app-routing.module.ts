@@ -5,18 +5,18 @@ import {UpdateFriendComponent} from "./components/update-friend/update-friend.co
 import {SingleFriendComponent} from "./components/single-friend/single-friend.component";
 
 const routes: Routes = [
-  // {
-  //   path: '/friends',
-  //   component: FriendComponent
-  // },
-  // {
-  //   path: '/friend/:id',
-  //   component: SingleFriendComponent
-  // },
-  // {
-  //   path: '/friend/edit/:id',
-  //   component: UpdateFriendComponent
-  // }
+  {
+    path: 'friends',
+    component: FriendComponent
+  },
+   {
+    path: 'friend/:id',
+    component: SingleFriendComponent
+  },
+  {
+    path: 'friend/edit/:id',
+    component: UpdateFriendComponent
+  }
 
 ];
 
