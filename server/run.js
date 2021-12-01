@@ -66,10 +66,15 @@ app.post('/api/friend/add',function(req,res){
     else if(!phoneRegex.test(newFriend.phone)) {
         errors.push({ 'phone': "Invalid phone number" });
     }
+    if (!newFriend.age) {
+        errors.push({ 'age': "Please fill the age" });
+    }
+    else if(!Number.isInteger(newFriend.age) || newFriend.age < 0) {
+        errors.push({ 'age': "Age mus be a valid number" });
+    }
     if(errors.length > 0) {
         return res.status(200).json({message: errors})
     }
-    return;
     Friend.findOne({email:newFriend.email},function(err,user){
         if(user) return res.status(400).json({ success : false, message :"Friend with this email already exists"});
 
@@ -85,13 +90,40 @@ app.post('/api/friend/add',function(req,res){
 });
 
 app.get('/api/friends', function (req, res) {
-    let friends = Friend.find({}, function(err, posts){
+    let friends = Friend.find({}, function(err, friends){
         if(err){
             console.log(err);
         }
         else {
-            res.json(posts);
+            res.json(friends);
         }
+    });
+});
+
+app.put('/api/update-best-friend/:id',function(req,res){
+    Friend.findOneAndUpdate({_id: req.params.id},req.body).then(function(student){
+        Friend.findOne({_id: req.params.id}).then(function(friend){
+            res.send(friend);
+        });
+    });
+});
+
+app.get('/api/friend/:id', function (req, res) {
+    let friend = Friend.find({_id: req.params.id}, function(err, friend){
+        if(err){
+            console.log(err);
+        }
+        else {
+            res.json(friend);
+        }
+    });
+});
+
+app.put('/api/update-friend/:id',function(req,res){
+    Friend.findOneAndUpdate({_id: req.params.id},req.body).then(function(student){
+        Friend.findOne({_id: req.params.id}).then(function(friend){
+            res.send(friend);
+        });
     });
 });
 

@@ -22,12 +22,11 @@ export class FriendService {
   }
 
   updateFriendAsBest(friend: Friend): Observable<Friend> {
-    const url = `${this.apiUrl}/${friend._id}`;
+    const url = `http://localhost:6969/api/update-best-friend/${friend._id}`;
     return this.http.put<Friend>(url, friend, httpOptions);
   }
 
-  addNewFriend(friend:FriendModel): Observable<FriendModel> {
-    // return this.http.post<FriendModel>(this.apiUrl,friend, httpOptions);
+  addNewFriend(friend:FriendModel): Observable<any> {
     return this.http.post<FriendModel>('http://localhost:6969/api/friend/add',friend, httpOptions);
   }
 

@@ -1,7 +1,7 @@
 <div class="w-full max-w-screen-xl mx-auto my-12">
-  <h1 class="text-2xl text-gray-700">Add New Friend</h1>
+  <h1 class="text-2xl text-gray-700">Update Friend</h1>
 
-  <form #addFriendForm="ngForm" (ngSubmit)="postFriend()" class="full max-w-screen-sm my-12">
+  <form #addFriendForm="ngForm" (ngSubmit)="updateFriend()" class="full max-w-screen-sm my-12">
 
     <div class="my-6">
       <label fsor="first_name" class="font-light text-gray-700 text-lg">First name</label>
@@ -15,7 +15,7 @@
         class="mx-auto border mt-2 px-3 py-3 text-sm w-full  outline-none shadow-xl" placeholder="First Name"
         [ngClass]="message.message[0].first_name ? 'border-red-500 focus:border-red-500' : 'border-gray-300 focus:border-gray-400'"
       >
-       <span *ngIf="message.message[0].first_name" class="block text-sm text-red-400 mt-2">{{ message.message[0].first_name }}</span>
+      <span *ngIf="message.message[0].first_name" class="block text-sm text-red-400 mt-2">{{ message.message[0].first_name }}</span>
     </div>
 
     <div class="my-6">
@@ -57,7 +57,7 @@
         <option value="" class="text-gray-300">choose one ...</option>
         <option *ngFor="let language of languages" value="{{ language.name }}">{{ language.name }}</option>
       </select>
-<!--      <span class="block text-sm text-red-400 mt-2">Error message</span>-->
+      <!--      <span class="block text-sm text-red-400 mt-2">Error message</span>-->
     </div>
 
     <div class="my-6">
@@ -68,13 +68,13 @@
 
     <div class="my-6">
       <label class="inline-flex items-center">
-      <input name="is_best_friend" #is_best_friends="ngModel" [(ngModel)]="friendModel.is_best_friend" class="text-indigo-500 w-5 h-5 cursor-pointer mr-2 focus:ring-indigo-400 focus:ring-opacity-25 border border-gray-300 rounded" type="checkbox" />
-      Is Best Friend?
-    </label>
+        <input name="is_best_friend" #is_best_friends="ngModel" [(ngModel)]="friendModel.is_best_friend" class="text-indigo-500 w-5 h-5 cursor-pointer mr-2 focus:ring-indigo-400 focus:ring-opacity-25 border border-gray-300 rounded" type="checkbox" />
+        Is Best Friend?
+      </label>
     </div>
 
     <button class="my-6 h-12 w-32 bg-red-500 text-white">
-      Add
+      Update
     </button>
 
   </form>

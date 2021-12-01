@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { FriendComponent } from './components/friend/friend.component';
 import { AddFriendComponent } from './components/add-friend/add-friend.component';
 import { SingleFriendComponent } from './components/single-friend/single-friend.component';
+import { UpdateFriendComponent } from './components/update-friend/update-friend.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FriendComponent,
     AddFriendComponent,
-    SingleFriendComponent
+    SingleFriendComponent,
+    UpdateFriendComponent
   ],
   imports: [
     BrowserModule,

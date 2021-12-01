@@ -7,7 +7,7 @@ export class Friend {
   favourite_language: string;
   is_best_friend: boolean;
   avatar: string;
-  age: number;
+  age?: number;
 
   constructor(first_name:string,last_name:string,email:string,phone: string,favourite_language:string,is_best_friend:boolean,avatar:string,age:number) {
     this.first_name = first_name;
@@ -18,9 +18,5 @@ export class Friend {
     this.is_best_friend = is_best_friend;
     this.avatar = avatar;
     this.age = age;
-  }
-
-  validate() {
-    console.log('test');
   }
 }
