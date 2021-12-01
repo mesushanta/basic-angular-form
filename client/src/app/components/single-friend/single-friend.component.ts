@@ -8,14 +8,14 @@ import { Friend } from "../../../Interface/Friend";
 })
 export class SingleFriendComponent implements OnInit {
   @Input() friend: Friend;
-  @Output() updateBestfriend: EventEmitter<Friend> = new EventEmitter();
+  @Output() updateBestFriend: EventEmitter<Friend> = new EventEmitter();
   constructor() { }
 
   ngOnInit(): void {
   }
 
   onUpdateBestFriend(friend) {
-    this.updateBestfriend.emit(friend);
+    this.updateBestFriend.emit(friend);
   }
 
 }

@@ -39,7 +39,7 @@
   ],
   "friends": [
     {
-      "_id": 1,
+      "id": 1,
       "first_name": "Aayush",
       "last_name": "Emery",
       "email": "aayush@gmail.com",
@@ -50,48 +50,92 @@
       "age": 24
     },
     {
-      "_id": 2,
+      "id": 2,
       "first_name": "Levison",
       "last_name": "Horn",
       "email": "horn_levi@gmail.com",
       "phone": "+324178 19827",
       "favourite_language": "js",
-      "is_best_friend": false,
+      "is_best_friend": true,
       "avatar": "",
       "age": 24
     },
     {
-      "_id": 3,
+      "id": 3,
       "first_name": "Demi-Lee",
       "last_name": "Watt",
       "email": "demileewatt@gmail.com",
       "phone": "04 89 77 67 67",
       "favourite_language": "python",
-      "is_best_friend": false,
+      "is_best_friend": true,
       "avatar": "",
       "age": 24
     },
     {
-      "_id": 4,
+      "id": 4,
       "first_name": "Melisa",
       "last_name": "Rich",
       "email": "not_ric h_melisa@gmail.com",
       "phone": "0 4 8 8 2167 76",
       "favourite_language": "js",
-      "is_best_friend": false,
+      "is_best_friend": true,
       "avatar": "",
       "age": 24
     },
     {
-      "_id": 5,
+      "id": 5,
       "first_name": "Cristina",
       "last_name": "Barrera",
       "email": "oops_cris@gmail.com",
       "phone": "0488 288 783",
       "favourite_language": "php",
-      "is_best_friend": false,
+      "is_best_friend": true,
       "avatar": "",
       "age": 24
+    },
+    {
+      "first_name": "Sushanta",
+      "last_name": "Pyakurel",
+      "email": "pyakurelsushanta@gmail.com",
+      "phone": "484630151",
+      "favourite_language": "php",
+      "is_best_friend": true,
+      "avatar": "",
+      "age": "33",
+      "id": 6
+    },
+    {
+      "first_name": "Sushanta",
+      "last_name": "Pyakurel",
+      "email": "pyakurelsushanta@gmail.com",
+      "phone": "484630151",
+      "favourite_language": "php",
+      "is_best_friend": true,
+      "avatar": "",
+      "age": "33",
+      "id": 7
+    },
+    {
+      "first_name": "neha",
+      "last_name": "haha",
+      "email": "ishkjfd@hhh.com",
+      "phone": "3",
+      "favourite_language": "python",
+      "is_best_friend": true,
+      "avatar": "",
+      "age": "22",
+      "id": 8
+    },
+    {
+      "first_name": "Sushanta",
+      "last_name": "Pyakurel",
+      "email": "pyakurelsushanta@gmail.com",
+      "phone": "484630151",
+      "favourite_language": "",
+      "is_best_friend": false,
+      "avatar": "",
+      "age": 0,
+      "id": 9
     }
   ]
 }

@@ -1,39 +1,60 @@
 <div class="w-full max-w-screen-xl mx-auto my-12">
   <h1 class="text-2xl text-gray-700">Add New Friend</h1>
-
-  <form method="post" class="full max-w-screen-sm my-12">
+  {{ friendModel | json }}
+  <li *ngFor="let val of message.message ">{{ val.fName }}</li>
+  <form #addFriendForm="ngForm" (ngSubmit)="postFriend()" class="full max-w-screen-sm my-12">
 
     <div class="my-6">
       <label for="first_name" class="font-light text-gray-700 text-lg">First name</label>
-      <input type="text" name="first_name" class="mx-auto border border-gray-300 mt-2 px-3 py-3 text-sm w-full focus:border-gray-400 outline-none shadow-xl" placeholder="First Name">
-      <span class="block text-sm text-red-400 mt-2">Error message</span>
+      <input
+        type="text"
+        name="first_name"
+        #first_name="ngModel"
+        [(ngModel)]="friendModel.first_name"
+        [class.invalid]="first_name.invalid && first_name.touched"
+        pattern="[a-zA-Z '-]+"
+        class="mx-auto border border-gray-300 mt-2 px-3 py-3 text-sm w-full focus:border-gray-400 outline-none shadow-xl" placeholder="First Name">
+<!--      <span class="block text-sm text-red-400 mt-2">Error message</span>-->
     </div>
 
     <div class="my-6">
       <label for="last_name" class="font-light text-gray-700 text-lg">Last name</label>
-      <input type="text" name="last_name" class="mx-auto border border-gray-300 mt-2 px-3 py-3 text-sm w-full focus:border-gray-400 outline-none shadow-xl" placeholder="Last Name">
-      <span class="block text-sm text-red-400 mt-2">Error message</span>
+      <input type="text" name="last_name" #last_name="ngModel" [(ngModel)]="friendModel.last_name" class="mx-auto border border-gray-300 mt-2 px-3 py-3 text-sm w-full focus:border-gray-400 outline-none shadow-xl" placeholder="Last Name">
+<!--      <span class="block text-sm text-red-400 mt-2">Error message</span>-->
     </div>
 
     <div class="my-6">
       <label for="email" class="font-light text-gray-700 text-lg">Email Address</label>
-      <input type="text" name="email" class="mx-auto border border-gray-300 mt-2 px-3 py-3 text-sm w-full focus:border-gray-400 outline-none shadow-xl" placeholder="myfriend@email.com">
-      <span class="block text-sm text-red-400 mt-2">Error message</span>
+      <input type="text" name="email" #email="ngModel" [(ngModel)]="friendModel.email" class="mx-auto border border-gray-300 mt-2 px-3 py-3 text-sm w-full focus:border-gray-400 outline-none shadow-xl" placeholder="myfriend@email.com">
+<!--      <span class="block text-sm text-red-400 mt-2">Error message</span>-->
     </div>
 
     <div class="my-6">
       <label for="phone" class="font-light text-gray-700 text-lg">Phone Number</label>
-      <input type="text" name="phone" class="mx-auto border border-gray-300 mt-2 px-3 py-3 text-sm w-full focus:border-gray-400 outline-none shadow-xl" placeholder="0032 488 288 783">
-      <span class="block text-sm text-red-400 mt-2">Error message</span>
+      <input type="text" name="phone" #phone="ngModel" [(ngModel)]="friendModel.phone" class="mx-auto border border-gray-300 mt-2 px-3 py-3 text-sm w-full focus:border-gray-400 outline-none shadow-xl" placeholder="0032 488 288 783">
+<!--      <span class="block text-sm text-red-400 mt-2">Error message</span>-->
     </div>
 
     <div class="my-6">
-      <label for="first_name" class="font-light text-gray-700 text-lg">Favourite Programming Language</label>
-      <select name="favourite_language" id=""  class="mx-auto border border-gray-300 mt-2 px-3 py-3 text-sm w-full focus:border-gray-400 outline-none shadow-xl">
+      <label for="favourite_language" class="font-light text-gray-700 text-lg">Favourite Programming Language</label>
+      <select name="favourite_language" #favourite_language="ngModel" [(ngModel)]="friendModel.favourite_language" id=""  class="mx-auto border border-gray-300 mt-2 px-3 py-3 text-sm w-full focus:border-gray-400 outline-none shadow-xl" placeholder="choose one">
         <option value="" class="text-gray-300">choose one ...</option>
         <option *ngFor="let language of languages" value="{{ language.name }}">{{ language.name }}</option>
       </select>
-      <span class="block text-sm text-red-400 mt-2">Error message</span>
+<!--      <span class="block text-sm text-red-400 mt-2">Error message</span>-->
+    </div>
+
+    <div class="my-6">
+      <label for="age" class="font-light text-gray-700 text-lg">Age</label>
+      <input type="text" name="phone" #age="ngModel" [(ngModel)]="friendModel.age" class="mx-auto border border-gray-300 mt-2 px-3 py-3 text-sm w-full focus:border-gray-400 outline-none shadow-xl" placeholder="your age">
+      <!--      <span class="block text-sm text-red-400 mt-2">Error message</span>-->
+    </div>
+
+    <div class="my-6">
+      <label class="inline-flex items-center">
+      <input name="is_best_friend" #is_best_friends="ngModel" [(ngModel)]="friendModel.is_best_friend" class="text-indigo-500 w-5 h-5 cursor-pointer mr-2 focus:ring-indigo-400 focus:ring-opacity-25 border border-gray-300 rounded" type="checkbox" />
+      Is Best Friend?
+    </label>
     </div>
 
     <button class="my-6 h-12 w-32 bg-red-500 text-white">
